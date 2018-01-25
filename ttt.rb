@@ -81,12 +81,12 @@ Board.display # on affiche la grille
 
 
 # créé une boucle pour initier le jeu : tant que la variable "winner = false" on initie le player1.turn donc on initie la méthode "turn" (ligne 15) au joueur 1 (player1)
-while Board.winner == false                                       
-  player1.turn                                
+while Board.winner == false     # tant que winner == false (tant qu'il n'y a pas de gagnant)                                  
+  player1.turn              # c'est au tour du joueur 1                  
   Board.display
   puts "#{player1.name} you are the winner!!!" if Board.winner # cette ligne : dans le cas ou toutes les conditions de la méthode self.winner sont remplit on initie la class Board winner (qui prend la valeur true) ce qui donne la victoire du joueur en question
   next if Board.winner == true
-  player2.turn                                                    
+  player2.turn                      # ensuite au tour du joueur 2                               
   Board.display
   puts "#{player2.name} you are the winner!!!" if Board.winner
 
